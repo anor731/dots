@@ -37,6 +37,10 @@ window.onload = ()=>{
         canvas.height = window.innerHeight
         let scope = new paper.PaperScope()
         scope.setup(canvas)
+        
+        let bg = new paper.Rectangle(new paper.Point(0, 0), new paper.Point(window.innerWidth, window.innerHeight))
+        bg.fillColor = '#474747'
+        console.log(bg)
 
         let grid = drawGrid(paper, [47, 23], [160, 100], 16)
         
@@ -113,12 +117,12 @@ window.onload = ()=>{
         }, 888)
         
         var text = new paper.PointText({
-            point: [50, 50],
-            content: 'The contents of the point text',
+            point: [49, 67],
+            content: "Get your optical memory ready, soon it will be turned into precise calculator.",
             fillColor: 'black',
-            fontFamily: 'Courier New',
+            fontFamily: 'Hack',
             fontWeight: 'bold',
-            fontSize: 25
+            fontSize: 24,
         });
 
         console.log(grid)
