@@ -65,7 +65,7 @@ window.onload = ()=>{
         setInterval(()=>{
                 grid.forEach((x)=>{
                         x.forEach((y)=>{
-                                y.style.strokeWidth = '1px';
+                                y.style.strokeWidth = 4;
                         })
                 })
         }, 777)
@@ -73,7 +73,7 @@ window.onload = ()=>{
         setInterval(()=>{
                 grid.forEach((x)=>{
                         x.forEach((y)=>{
-                                y.style.strokeWidth = '2px';
+                                y.style.strokeWidth = 3;
                         })
                 })
         }, 1337)
@@ -112,10 +112,14 @@ window.onload = ()=>{
                 })
         }, 888)
         
-        var text = new PointText(new Point(200, 50));
-                text.justification = 'center';
-                text.fillColor = 'black';
-                text.content = 'The contents of the point text';
+        var text = new paper.PointText({
+            point: [50, 50],
+            content: 'The contents of the point text',
+            fillColor: 'black',
+            fontFamily: 'Courier New',
+            fontWeight: 'bold',
+            fontSize: 25
+        });
 
         console.log(grid)
 }
