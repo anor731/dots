@@ -90,7 +90,7 @@ window.onload = ()=>{
         setInterval(()=>{
                 grid.forEach((x)=>{
                         x.forEach((y)=>{
-                                y.style.strokeColor = 'blue';
+                                y.style.strokeColor = 'yellow';
                         })
                 })
         }, 870)
